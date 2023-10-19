@@ -6,6 +6,10 @@ body {
 	font-family: Helvetica, sans-serif;
 	font-size: 62.5%;
 	color: #333;
+    width: 800px;   
+    height: 100%;  
+    margin: 0 auto;
+    
 }
 
 
@@ -13,10 +17,23 @@ body {
 #top {
     color: #fff
 }
+#page{
+    padding: 10px;
+	border: 8px solid #ACE8FB ;
+	text-align: center;
+    background-color: #fff
+
+}
+#head{ 
+        width: 100%;   
+        height: 100%;   
+        object-fit:cover;    
+}
 
 #menu {
-    width: 800px;
+    width: auto;
     height: 40px;
+
     background: linear-gradient(#20DCFE 25%, #07ACCB 49%, #0892AB 52%, #027186 75%, #095F71);
 }
 
@@ -33,14 +50,14 @@ body {
 
 #menu ul li a {
     display: block;
-    width: 110px;
+    width: auto;
     color: #fff;
     text-decoration: none;
     font-weight: bold;
 }
 
 #icon {
-    width: 800px;
+    width: auto;
     height: 100px;
     background: #fff
 }
@@ -55,6 +72,27 @@ body {
     float: left;
     margin-top: 13px;
 }
+.icon-container-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.icon-container {
+    flex: 1;
+    
+    
+}
+
+.image-container-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.image-container {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
 
 ##sidebar h3 {
 	font-weight: bold;
@@ -62,11 +100,21 @@ body {
 	margin: 0 0 20px 0;
 	padding: 5px;
 }
+
 .image-container {
     display: flex;
     flex-wrap: wrap;
     border: 3px solid #C3C9CD ;
     justify-content: flex-start;
+    background: #D1F6FD
+
+}
+.content{
+    display: flex;
+    flex-wrap: wrap;
+    border: 3px solid #C3C9CD ;
+    justify-content: flex-start;
+    background: #D1F6FD
 }
 .image {
     flex: 1;
