@@ -1,26 +1,66 @@
 body {
-	margin: 0 auto;
-	width: 800px;
-	padding: 0;
-	background: #0E6FCC ;
-	font-family: Helvetica, sans-serif;
-	font-size: 62.5%;
-	color: #333;
+    margin: 0 ;
+    width: 800px;
+    padding: 0;
+    background: #0E6FCC;
+    font-family: Helvetica, sans-serif;
+    font-size: 62.5%;
+    color: #333;
 }
-#menu ul{
+
+#top {
+    color: floralwhite
+}
+
+#menu {
+    width: 800px;
+    height: 40px;
+    background: linear-gradient(#20DCFE 25%, #07ACCB 49%, #0892AB 52%, #027186 75%, #095F71);
+}
+
+#menu ul {
     list-style: none;
     padding: 0px;
-    padding-left: 70px;
     margin: 0;
 }
-#menu ul li{
+
+#menu ul li {
     float: left;
-    margin-top: 10px;
+    margin-top: 13px;
 }
-#menu ul li a{
+
+#menu ul li a {
     display: block;
     width: 110px;
     color: #fff;
     text-decoration: none;
     font-weight: bold;
+}
+
+#icon {
+    width: 800px;
+    height: 100px;
+    background: #fff
+}
+
+#icon ul {
+    list-style: none;
+    padding: 0px;
+    margin: 0;
+}
+
+#icon ul li {
+    float: left;
+    margin-top: 13px;
+}
+
+#img {}
+
+#footer {
+	clear: both;
+	background: linear-gradient(#00D7FD , #047287,#076E83);
+	padding: 10px;
+	border-top: 8px solid #06738A;
+	text-align: center;
+	color: #fff;
 }
