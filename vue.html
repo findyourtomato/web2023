@@ -11,14 +11,19 @@
 
 <body>
     <div id="app">
-
+<h1>{{ message }}</h1>
     </div>
+    <button onclick="myfunction()">Click me!</button>
+
 </body>
 <script>
     var myObject = new Vue({
         el: "#app",
         data: { message:"hello,vue!"}
     })
+    function myfunction(){
+        myObject.message = "hello,kitty!"
+    }
        
 </script>
 
