@@ -4,7 +4,7 @@ var bodyParser = require("body-parser");
 server = express();
 var fs = require("fs");
 
-server.use(express.static("Bs5_Vue"));//web root
+server.use(express.static("one"));//web root
 //server.use(express.static("md110"));//web root
 server.use(bodyParser.urlencoded());
 server.use(bodyParser.json());
@@ -12,14 +12,10 @@ server.use(bodyParser.json());
 var DB = require("nedb-promises");
 var ContactDB = DB.create("contact.db");
 var PortfolioDB = DB.create("portfolio.db");
-// PortfolioDB.insert([
-//     { href: "#portfolioModal1", imgSrc: "img/portfolio/roundicons.png", title: "Round Icons", text: "Graphic Design" },
-//     { href: "#portfolioModal2", imgSrc: "img/portfolio/startup-framework.png", title: "Startup Framework", text: "Website Design" },
-//     { href: "#portfolioModal3", imgSrc: "img/portfolio/treehouse.png", title: "Treehouse", text: "Website Design" },
-//     { href: "#portfolioModal1", imgSrc: "img/portfolio/roundicons.png", title: "Round Icons", text: "Graphic Design" },
-//     { href: "#portfolioModal2", imgSrc: "img/portfolio/startup-framework.png", title: "Startup Framework", text: "Website Design" },
-//     { href: "#portfolioModal3", imgSrc: "img/portfolio/treehouse.png", title: "Treehouse", text: "Website Design" }
-// ])
+//  PortfolioDB.insert([
+//     { href: "#portfolioModal1", imgSrc: "my_index_img/1.jpg", title: "000 幽靈豹", title2: "是一隻透明看不到的海豹，出場有幽靈bgm" },
+//     { href: "#portfolioModal1", imgSrc: "my_index_img/1.jpg", title: "000", title2: "是一隻透明看海豹，出場有幽靈bgm" }
+//  ])
  
  
 //var sharp=
