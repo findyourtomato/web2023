@@ -16,6 +16,10 @@ var PortfolioDB = DB.create("portfolio.db");
 //     { href: "#portfolioModal1", imgSrc: "my_index_img/1.jpg", title: "000 幽靈豹", title2: "是一隻透明看不到的海豹，出場有幽靈bgm" },
 //     { href: "#portfolioModal1", imgSrc: "my_index_img/1.jpg", title: "000", title2: "是一隻透明看海豹，出場有幽靈bgm" }
 //  ])
+// PortfolioDB.insert([
+//     { href: "#portfolioModal1", imgSrc: "one/my_index_img/走路_0001.png", title: "walk", title2: "main character" },
+//     { href: "#portfolioModal1", imgSrc: "one/my_index_img/時間軸1_0001.png", title: "highlight", title2: "walkwhighlight" }
+// ])
  
  
 //var sharp=
