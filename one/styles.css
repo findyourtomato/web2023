@@ -7,8 +7,8 @@ body {
     text-align: center;
     padding: 20px;
     background-color: #797979;
-    font-family:fantasy;
-    font-weight:bold;
+    font-family: fantasy;
+    font-weight: bold;
 
 
 }
@@ -28,14 +28,22 @@ footer {
     padding: 10px;
     background-color: #f2f2f2;
 }
+
 #mainNav {
 
     text-align: center;
     padding: 20px;
     background-color: #797979;
-    font-family:fantasy
-    
+    font-family: fantasy
 }
+
 a {
-    color:rgb(109, 113, 133);
+    color: rgb(109, 113, 133);
+}
+
+#portfolio .portfolio-item .portfolio-link {
+    display: block;
+    position: relative;
+    max-width: 400px;
+    margin: 0 auto;
 }
