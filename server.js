@@ -20,6 +20,10 @@ var PortfolioDB = DB.create("portfolio.db");
 //     { href: "#portfolioModal1", imgSrc: "one/my_index_img/走路_0001.png", title: "walk", title2: "main character" },
 //     { href: "#portfolioModal1", imgSrc: "one/my_index_img/時間軸1_0001.png", title: "highlight", title2: "walkwhighlight" }
 // ])
+// PortfolioDB.insert([
+//     { href: "#portfolioModal1", imgSrc: "my_index_img/a2g.jpg", title: "walk", title2: "main character" },
+//     { href: "#portfolioModal1", imgSrc: "my_index_img/a2g.jpg", title: "highlight", title2: "walkwhighlight" }
+// ])
  
  
 //var sharp=
