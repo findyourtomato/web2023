@@ -47,10 +47,10 @@ var PortfolioDB = DB.create("portfolio.db");
 // ])
 
 
-PortfolioDB.insert([
+// PortfolioDB.insert([
 
-    { href: "#portfolioModal1", imgSrc: "my_index_img/data3.jpg", title: "pen", title2: "Maybe something can be done" }
-])
+//     { href: "#portfolioModal1", imgSrc: "my_index_img/data3.jpg", title: "pen", title2: "Maybe something can be done" }
+// ])
 
 //var sharp=
 server.set("view engine", "ejs");
