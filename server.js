@@ -24,19 +24,45 @@ var PortfolioDB = DB.create("portfolio.db");
 //     { href: "#portfolioModal1", imgSrc: "my_index_img/a2g.jpg", title: "walk", title2: "main character" },
 //     { href: "#portfolioModal1", imgSrc: "my_index_img/a2g.jpg", title: "highlight", title2: "walkwhighlight" }
 // ])
- 
- 
+// PortfolioDB.insert([
+
+//     { href: "#portfolioModal1", imgSrc: "my_index_img/a2g.jpg", title: "123456", title2: "walkwhighlight" }
+// ])
+// PortfolioDB.insert ([
+
+//     { href: "#portfolioModal1", imgSrc: "my_index_img/1.jpg", title: "123456", title2: "walkwhighlight" }
+// ])
+
+// PortfolioDB.insert ([
+
+//       { href: "#portfolioModal1", imgSrc: "my_index_img/1.jpg", title: "123456", title2: "walkwhighlight" }
+//    ])
+
+
+// PortfolioDB.insert ([
+// { href: "#portfolioModal1", imgSrc: "my_index_img/data1.jpg", title: "files", title2: "what's on it" }
+//             ])
+// PortfolioDB.insert([
+//     { href: "#portfolioModal1", imgSrc: "my_index_img/data2.jpg", title: "who", title2: "someone is inside" }
+// ])
+
+
+PortfolioDB.insert([
+
+    { href: "#portfolioModal1", imgSrc: "my_index_img/data3.jpg", title: "pen", title2: "Maybe something can be done" }
+])
+
 //var sharp=
 server.set("view engine", "ejs");
-server.set("views", __dirname+"/views");
+server.set("views", __dirname + "/views");
 
 
-server.get("/contact", function(req, res){
+server.get("/contact", function (req, res) {
     //res.send("");
     res.redirect("https:/md.nutc.edu.tw");
-}); 
+});
 
-server.get("/service", function(req, res){
+server.get("/service", function (req, res) {
 
     Services = [
         { icon: "fa-shopping-cart", title: "E-Commerce", desc: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur porro laborum fuga repellat necessitatibus corporis nulla, in ex velit recusandae obcaecati maiores, doloremque quisquam similique, tempora aspernatur eligendi delectus! Rem." },
@@ -46,21 +72,21 @@ server.get("/service", function(req, res){
     res.send(Services);
 })
 
-server.get("/portfolio", function(req, res){
-    
+server.get("/portfolio", function (req, res) {
+
     PortfolioDB.find({}).then(results => {
-        if(results !=null){
+        if (results != null) {
             res.send(results);
-        }else{
+        } else {
             res.send("Error!")
         }
-    }) 
-    
+    })
+
 })
 
 
- 
-server.post("/contact", function(req, res){
+
+server.post("/contact", function (req, res) {
     console.log(req.body);
     ContactDB.insert(req.body);
     res.send();
@@ -68,6 +94,6 @@ server.post("/contact", function(req, res){
 })
 
 
-server.listen(5500, function(){
+server.listen(5500, function () {
     console.log("Server is running at port 8000!")
 })
