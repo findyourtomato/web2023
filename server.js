@@ -89,8 +89,10 @@ server.get("/portfolio", function (req, res) {
 server.post("/contact", function (req, res) {
     console.log(req.body);
     ContactDB.insert(req.body);
+    res.redirect("/");
     res.send();
-    //res.redirect("/index.html");
+    
+    
 })
 
 
