@@ -4,11 +4,17 @@ var bodyParser = require("body-parser");
 server = express();
 var fs = require("fs");
 
+
+// 設置靜態文件夾 "one" 為 Web 根目錄
 server.use(express.static("one"));//web root
 //server.use(express.static("md110"));//web root
+
+// 使用 body-parser 中間件來解析 HTTP 請求體
 server.use(bodyParser.urlencoded());
 server.use(bodyParser.json());
 
+
+// 創建 NeDB 數據庫實例，分別用於存儲聯絡人和作品集的數據
 var DB = require("nedb-promises");
 var ContactDB = DB.create("contact.db");
 var PortfolioDB = DB.create("portfolio.db");
@@ -53,15 +59,20 @@ var PortfolioDB = DB.create("portfolio.db");
 // ])
 
 //var sharp=
+// 設置視圖引擎為 EJS
 server.set("view engine", "ejs");
 server.set("views", __dirname + "/views");
 
-
+// 處理 "/contact" 路由的 GET 請求，重新導向到 "https:/md.nutc.edu.tw"
 server.get("/contact", function (req, res) {
     //res.send("");
     res.redirect("https:/md.nutc.edu.tw");
 });
 
+
+
+
+// 處理 "/service" 路由的 GET 請求，返回一些服務信息
 server.get("/service", function (req, res) {
 
     Services = [
@@ -72,6 +83,9 @@ server.get("/service", function (req, res) {
     res.send(Services);
 })
 
+
+
+// 處理 "/portfolio" 路由的 GET 請求，返回作品集數據
 server.get("/portfolio", function (req, res) {
 
     PortfolioDB.find({}).then(results => {
@@ -85,7 +99,7 @@ server.get("/portfolio", function (req, res) {
 })
 
 
-
+// 處理 "/contact" 路由的 POST 請求，將聯絡人信息存入數據庫並重定向到根路徑
 server.post("/contact", function (req, res) {
     console.log(req.body);
     ContactDB.insert(req.body);
@@ -95,7 +109,7 @@ server.post("/contact", function (req, res) {
     
 })
 
-
+// 聽取 5500 端口上的請求
 server.listen(5500, function () {
     console.log("Server is running at port 8000!")
 })
